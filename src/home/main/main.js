@@ -6,35 +6,57 @@ import Axios from 'axios';
 class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { categories: [] };
+    this.state = {
+      categories: [],
+      loaded: false
+    };
   }
 
   componentWillMount() {
-    console.log(this.state);
-
     Axios.get('https://swapi.co/api/').then(res => {
       const data = res.data;
       console.log(data);
       let array = [];
       for (var key of Object.keys(data)) {
-        array.push(key);
+        //Capitalize first letter
+        const lowercase = key;
+        const title =
+          lowercase.charAt(0).toUpperCase() + lowercase.substring(1);
+        //Pushing to array
+        array.push(title);
       }
-      this.setState({
-        categories: array
-      });
 
-      console.log(this.state);
+      //Setting categories in state
+      this.setState({
+        categories: array,
+        loaded: true
+      });
     });
   }
 
   render() {
+    let loaded = this.state.loaded;
+    let content;
+    let title;
+
+    if (loaded) {
+      title = 'Categories';
+      content = (
+        <div className="category-container">
+          {this.state.categories.map(category => (
+            <Category title={category} />
+          ))}
+        </div>
+      );
+    } else {
+      title = 'Loading categories...';
+      content = <div className="loader"></div>;
+    }
+
     return (
       <div className="main-container">
-        <h1 className={'text-center title'}>Categories</h1>
-
-        {this.state.categories.map(category => (
-          <p>{category}</p>
-        ))}
+        <h1 className={'text-center title'}>{title}</h1>
+        {content}
       </div>
     );
   }
