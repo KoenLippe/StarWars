@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Main from './home/main/main';
-import Home from './test/testHome';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './home/navbar/navbar';
+import Categories from './home/main/categories/categories';
+import Items from './home/main/items/items';
 
 ReactDOM.render(
   <Router>
@@ -15,8 +15,8 @@ ReactDOM.render(
       <div>
         <NavBar />
       </div>
-      <Route exact path="/" component={Main} />
-      <Route path="/items" component={Home} />
+      <Route exact path="/" component={Categories} />
+      <Route path="/items" component={Items} />
     </div>
   </Router>,
 

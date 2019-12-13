@@ -1,0 +1,42 @@
+.main-container {
+  min-height: calc(100vh - 76px);
+  background-image: url('../../../assets/img/box/picture1.jpg');
+  display: flex;
+  justify-content: center;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 80vh;
+}
+
+.right-container {
+  float: right;
+  width: 70%;
+  max-height: calc(100% - 130px);
+  background: white;
+}
+.left-container {
+  float: left;
+  min-width: 30%;
+  max-height: calc(100% - 130px);
+  background: #d3d3d3;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group input {
+  width: 90%;
+}
+
+.categories-container {
+  flex-direction: column;
+  justify-content: start;
+  width: 90%;
+}

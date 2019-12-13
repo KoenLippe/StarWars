@@ -3,11 +3,9 @@ import logo from '../../assets/img/star-wars.png';
 import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
-  constructor() {
-    super();
-  }
+  
 
-  handleClick = e => {};
+  
 
   render() {
     return (

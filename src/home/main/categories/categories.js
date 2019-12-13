@@ -1,9 +1,9 @@
 import React from 'react';
 import Category from './category/category';
-import './main.css';
+import './categories.css';
 import Axios from 'axios';
 
-class Main extends React.Component {
+class Categories extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,6 +13,7 @@ class Main extends React.Component {
   }
 
   componentWillMount() {
+     //Requests are slow somehow!
     Axios.get('https://swapi.co/api/').then(res => {
       const data = res.data;
       console.log(data);
@@ -62,4 +63,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default Categories;
