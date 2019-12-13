@@ -18,7 +18,6 @@ class Items extends React.Component {
       const data = res.data;
       console.log(data);
       let categoriesArray = [];
-      let itemsArray = [];
       for (var key of Object.keys(data)) {
         //Capitalize first letter
         const lowercase = key;

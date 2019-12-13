@@ -2,10 +2,6 @@ import React from 'react';
 import './category.css';
 
 class Category extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="category">
