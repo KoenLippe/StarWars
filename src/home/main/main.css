@@ -1,0 +1,18 @@
+.category-container {
+  height: 100%;
+  width: 100%;
+
+  align-items: center;
+}
+
+.main-container {
+  min-height: calc(100vh - 76px);
+  background: lightblue;
+}
+
+.title {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,15 @@
+.category {
+  
+  min-height: 250px;
+  min-width: 250px;
+  background-color: red;
+  margin: 10px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.category table {
+  width: 80%;
+}

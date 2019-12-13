@@ -1,15 +1,15 @@
 import React from 'react';
-import logo from '../../assets/star-wars.png';
+import logo from '../../assets/img/star-wars.png';
 
 function NavBar() {
   return (
-    <div class="header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light custom">
-        <a class="navbar-brand" routerLink="/">
+    <div className={'header'}>
+      <nav className={'navbar navbar-expand-lg navbar-light bg-light custom'}>
+        <a className={'navbar-brand'}>
           <img height="50" src={logo} />
         </a>
         <button
-          class="navbar-toggler custom-toggler"
+          className={'navbar-toggler custom-toggler'}
           type="button"
           data-toggle="collapse"
           data-target="#navbarColor"
@@ -17,19 +17,17 @@ function NavBar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className={'navbar-toggler-icon'}></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarColor">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link">
-                Categorieën <span class="sr-only">(current)</span>
+        <div className={'collapse navbar-collapse'} id="navbarColor">
+          <ul className={'navbar-nav mr-auto'}>
+            <li className={'nav-item'}>
+              <a className={'nav-link'}>
+                Categorieën <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/scoreboard">
-                Items
-              </a>
+            <li className={'nav-item'}>
+              <a className={'nav-link'}>Items</a>
             </li>
           </ul>
         </div>
