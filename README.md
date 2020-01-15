@@ -1,4 +1,7 @@
+
 # Project StarWars
+
+!! This is not a finished project, please read below !!
 
 This application is Intern Job Application assignment. 
 The assignment was to create a React application that has two views using the swapi.co API.  
