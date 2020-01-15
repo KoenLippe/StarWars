@@ -27,4 +27,8 @@ I have worked on this assingment for 8 hours. Keep in mind that this is my first
 npm start
 ```
 
+### Live view
+
+For a live view go to https://koenlippe.nl/starwars/
+
 
